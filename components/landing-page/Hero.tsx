@@ -1,0 +1,65 @@
+import Image from "next/image";
+
+export default function Hero() {
+  return (
+    <section className="relative bg-gray-50 py-16 lg:py-24">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+        {/* Left */}
+        <div>
+          <span className="inline-block bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
+            AI-Powered Financial Intelligence
+          </span>
+
+          <h1 className="mt-6 text-3xl sm:text-4xl text-black lg:text-5xl font-bold leading-tight">
+            Understand Your{" "}
+            <span className="text-green-500">M-Pesa Spending</span> in Seconds
+          </h1>
+
+          <p className="mt-5 text-gray-600 text-lg">
+            Transform your M-Pesa statements into actionable insights.
+            Automatically categorize transactions and visualize spending.
+          </p>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+            <button className="bg-green-500 text-white text-lg px-6 py-3 rounded-lg">
+              Upload Statement
+            </button>
+
+            {/* <button className="border px-6 py-3 rounded-lg">Try Demo</button> */}
+          </div>
+        </div>
+
+        {/* Right Card */}
+        <div>
+          <div className="rounded-xl overflow-hidden">
+            <Image
+              src="/chart.png"
+              alt="chart"
+              width={650}
+              height={550}
+              className="object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
+        {/* <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-md mx-auto">
+          <p className="text-gray-500">Total Balance</p>
+
+          <p className="text-3xl font-bold text-green-600 mt-1">KSh 97,870</p>
+
+          <div className="mt-6 space-y-4">
+            <div className="flex justify-between">
+              <span className="text-gray-600">Transport</span>
+              <span>KSh 1,480</span>
+            </div>
+
+            <div className="flex justify-between">
+              <span className="text-gray-600">Expenses</span>
+              <span className="text-red-500">-25,630</span>
+            </div>
+          </div>
+        </div> */}
+      </div>
+    </section>
+  );
+}
