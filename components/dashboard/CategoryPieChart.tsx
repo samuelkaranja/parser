@@ -1,6 +1,13 @@
 "use client";
 
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+  ResponsiveContainer,
+  PieLabelRenderProps,
+} from "recharts";
 
 const data = [
   { name: "Shopping", value: 500 },
@@ -12,14 +19,10 @@ const data = [
 const COLORS = ["#3b82f6", "#22c55e", "#f59e0b", "#ef4444"];
 
 // Custom label renderer
-const renderCustomLabel = ({
-  name,
-  percent,
-}: {
-  name: string;
-  percent: number;
-}) => {
-  return `${name} ${(percent * 100).toFixed(0)}%`;
+const renderCustomLabel = (props: PieLabelRenderProps) => {
+  const { name, percent } = props;
+
+  return `${name ?? ""} ${((percent ?? 0) * 100).toFixed(0)}%`;
 };
 
 export default function CategoryPieChart() {
@@ -38,7 +41,7 @@ export default function CategoryPieChart() {
             label={renderCustomLabel}
           >
             {data.map((_, i) => (
-              <Cell key={i} fill={COLORS[i]} />
+              <Cell key={i} fill={COLORS[i % COLORS.length]} />
             ))}
           </Pie>
 
