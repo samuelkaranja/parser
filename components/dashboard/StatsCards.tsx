@@ -11,7 +11,7 @@ export default function StatsCards() {
       {cards.map((card, index) => (
         <div
           key={index}
-          className="bg-white p-6 rounded-xl border-gray-200 hover:shadow-2xl hover:border-emerald-600 hover:cursor-pointer"
+          className="bg-white p-6 rounded-xl border-gray-200 hover:shadow-xl hover:border-emerald-600 hover:cursor-pointer"
         >
           <p className="text-gray-500 text-sm">{card.title}:</p>
 
