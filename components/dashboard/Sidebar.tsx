@@ -38,7 +38,7 @@ export default function Sidebar() {
     {
       label: "Paid Out",
       icon: <ArrowUp size={18} />,
-      href: "/paid-out",
+      href: "/dashboard/paid-out",
     },
     {
       label: "Categories",
