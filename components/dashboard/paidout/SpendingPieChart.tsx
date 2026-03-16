@@ -35,13 +35,12 @@ export default function SpendingPieChart() {
       <div className="w-full h-[320px]">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
-
             <Pie
               data={data}
               dataKey="value"
               nameKey="name"
               outerRadius={110}
-              label={({ percent }) =>
+              label={({ percent = 0 }) =>
                 `${(percent * 100).toFixed(0)}%`
               }
               labelLine={false}
@@ -54,15 +53,9 @@ export default function SpendingPieChart() {
               ))}
             </Pie>
 
-            <Tooltip
-              formatter={(value: number) => `KSh ${value}`}
-            />
+            <Tooltip formatter={(value: number) => `KSh ${value}`} />
 
-            <Legend
-              verticalAlign="bottom"
-              height={36}
-            />
-
+            <Legend verticalAlign="bottom" height={36} />
           </PieChart>
         </ResponsiveContainer>
       </div>
