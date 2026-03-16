@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gray-50 py-16 lg:py-24">
+    <section className="relative bg-gray-50 py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left */}
         <div>
@@ -35,8 +35,8 @@ export default function Hero() {
             <Image
               src="/chart.png"
               alt="chart"
-              width={650}
-              height={550}
+              width={550}
+              height={500}
               className="object-cover"
               loading="eager"
             />

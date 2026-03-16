@@ -8,7 +8,7 @@ interface Props {
 export default function StatCard({ title, value, subtitle, highlight }: Props) {
   return (
     <div
-      className={`p-5 rounded-xl border ${
+      className={`p-5 rounded-xl ${
         highlight ? "bg-green-600 text-white border-none" : "bg-white"
       }`}
     >

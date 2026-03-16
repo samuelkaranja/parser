@@ -43,12 +43,12 @@ export default function Sidebar() {
     {
       label: "Categories",
       icon: <PieChart size={18} />,
-      href: "/categories",
+      href: "/dashboard/categories",
     },
     {
       label: "Summary",
       icon: <FileText size={18} />,
-      href: "/summary",
+      href: "/dashboard/summary",
     },
   ];
 
@@ -83,10 +83,10 @@ export default function Sidebar() {
       `}
       >
         {/* Header */}
-        <div className="flex items-center justify-between md:block">
-          <h2 className="text-xl font-bold mb-10 text-green-600">
-            M-Pesa Insights
-          </h2>
+        <div className="flex items-center justify-between md:block mb-10">
+          <Link href={"/"} className="text-xl font-bold text-green-600 hover:underline">
+            PesaLens Parser
+          </Link>
 
           <button onClick={() => setOpen(false)} className="md:hidden">
             <X size={22} />

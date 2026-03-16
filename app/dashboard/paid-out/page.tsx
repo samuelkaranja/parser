@@ -1,13 +1,27 @@
+import CategoryFilter from "@/components/dashboard/paidout/CategoryFilter";
+import Header from "@/components/dashboard/paidout/Header";
+import SpendingPieChart from "@/components/dashboard/paidout/SpendingPieChart";
+import StatsCards from "@/components/dashboard/paidout/StatsCards";
+import TransactionsTable from "@/components/dashboard/paidout/TransactionsTable";
+import WeeklyBarChart from "@/components/dashboard/paidout/WeeklyBarChart";
+
 export default function PaidOutPage() {
   return (
-    <div className="bg-white p-6 rounded-xl border">
-      <h1 className="text-xl font-semibold mb-4">
-        Paid Out Transactions
-      </h1>
+    <div className="space-y-6">
+      <div className="p-4 bg-white rounded-lg">
+        <Header />
+      </div>
 
-      <p className="text-gray-500">
-        All outgoing M-Pesa transactions will appear here.
-      </p>
+      <StatsCards />
+
+      <CategoryFilter />
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <SpendingPieChart />
+        <WeeklyBarChart />
+      </div>
+
+      <TransactionsTable />
     </div>
   );
 }
