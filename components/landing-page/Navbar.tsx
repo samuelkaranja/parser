@@ -16,12 +16,11 @@ export default function Navbar() {
         </div>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex gap-8 text-gray-600 text-lg">
+        <div className="hidden md:flex gap-8 text-gray-600 text-[16px]">
           <a href="#">Features</a>
           <a href="#">Pricing</a>
           <a href="#">About</a>
         </div>
-
 
         {/* Mobile menu button */}
         <button className="md:hidden" onClick={() => setOpen(!open)}>
@@ -30,11 +29,10 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden px-6 pb-4 space-y-3">
+        <div className="md:hidden px-6 pb-4 space-y-3 text-[14px]">
           <a className="block">Features</a>
           <a className="block">Pricing</a>
           <a className="block">About</a>
-
         </div>
       )}
     </nav>

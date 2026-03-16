@@ -9,7 +9,10 @@ export default function StatsCards() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {cards.map((card, index) => (
-        <div key={index} className="bg-white p-6 rounded-xl shadow-sm border">
+        <div
+          key={index}
+          className="bg-white p-6 rounded-xl border-gray-200 hover:shadow-2xl hover:border-emerald-600 hover:cursor-pointer"
+        >
           <p className="text-gray-500 text-sm">{card.title}:</p>
 
           <h2 className="text-2xl text-black font-bold mt-2">{card.amount}</h2>

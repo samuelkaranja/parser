@@ -3,13 +3,24 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 
 const data = [
-  { name: "Shopping", value: 400 },
-  { name: "Transport", value: 300 },
+  { name: "Shopping", value: 500 },
+  { name: "Transport", value: 200 },
   { name: "Bills", value: 200 },
   { name: "Food", value: 100 },
 ];
 
 const COLORS = ["#3b82f6", "#22c55e", "#f59e0b", "#ef4444"];
+
+// Custom label renderer
+const renderCustomLabel = ({
+  name,
+  percent,
+}: {
+  name: string;
+  percent: number;
+}) => {
+  return `${name} ${(percent * 100).toFixed(0)}%`;
+};
 
 export default function CategoryPieChart() {
   return (
@@ -20,7 +31,12 @@ export default function CategoryPieChart() {
 
       <ResponsiveContainer width="100%" height={300}>
         <PieChart>
-          <Pie data={data} dataKey="value" outerRadius={100} label>
+          <Pie
+            data={data}
+            dataKey="value"
+            outerRadius={100}
+            label={renderCustomLabel}
+          >
             {data.map((_, i) => (
               <Cell key={i} fill={COLORS[i]} />
             ))}
