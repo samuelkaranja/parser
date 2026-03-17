@@ -59,7 +59,7 @@ export default function Sidebar() {
         onClick={() => setOpen(true)}
         className="md:hidden fixed top-4 left-4 z-50 bg-white p-2 rounded-lg shadow"
       >
-        <Menu size={22} />
+        <Menu size={22} color="black" />
       </button>
 
       {/* Overlay */}

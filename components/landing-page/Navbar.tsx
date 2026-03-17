@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -22,6 +23,13 @@ export default function Navbar() {
           <a href="#">About</a>
         </div>
 
+        <Link
+          href={"/dashboard"}
+          className="bg-emerald-500 px-5 py-1 rounded text-white font-medium text-[14px] hover:cursor-pointer"
+        >
+          Dashboard
+        </Link>
+
         {/* Mobile menu button */}
         <button className="md:hidden" onClick={() => setOpen(!open)}>
           ☰
@@ -29,10 +37,19 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="md:hidden px-6 pb-4 space-y-3 text-[14px]">
-          <a className="block">Features</a>
-          <a className="block">Pricing</a>
-          <a className="block">About</a>
+        <div>
+          <div className="md:hidden px-6 pb-4 space-y-3 text-[14px]">
+            <a className="block">Features</a>
+            <a className="block">Pricing</a>
+            <a className="block">About</a>
+          </div>
+
+          <Link
+            href={"/dashboard"}
+            className="bg-emerald-500 px-5 py-1 rounded text-white font-medium text-[14px] hover:cursor-pointer"
+          >
+            Dashboard
+          </Link>
         </div>
       )}
     </nav>

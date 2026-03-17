@@ -40,10 +40,8 @@ export default function TransactionsTable() {
 
   return (
     <div className="bg-white rounded-xl shadow-sm p-6">
-
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-5 gap-3">
-
         <div>
           <h3 className="text-xl font-semibold text-black">
             All Outgoing Transactions
@@ -55,7 +53,6 @@ export default function TransactionsTable() {
 
         {/* Search + Filters */}
         <div className="flex items-center gap-3">
-
           <div className="flex items-center border border-gray-200 rounded-lg px-3 py-2 text-sm">
             <Search size={16} className="text-gray-400 mr-2" />
             <input
@@ -68,15 +65,12 @@ export default function TransactionsTable() {
             <SlidersHorizontal size={16} />
             More Filters
           </button>
-
         </div>
-
       </div>
 
       {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
-
           <thead>
             <tr className="text-gray-500 border-b border-gray-200">
               <th className="py-4 text-left">Transaction ID</th>
@@ -89,27 +83,21 @@ export default function TransactionsTable() {
           </thead>
 
           <tbody>
-
             {transactions.map((tx) => (
               <tr
                 key={tx.id}
                 className="border-b last:border-none hover:bg-gray-50"
               >
-
-                <td className="py-4 font-medium text-gray-700">
-                  {tx.id}
-                </td>
+                <td className="py-4 font-medium text-gray-700">{tx.id}</td>
 
                 {/* Recipient */}
                 <td>
                   <div className="flex items-center gap-3 text-black">
-
                     <div className="w-8 h-8 flex items-center justify-center rounded-full bg-red-100 text-red-600 text-xs font-semibold">
                       {tx.recipient.charAt(0)}
                     </div>
 
                     {tx.recipient}
-
                   </div>
                 </td>
 
@@ -125,9 +113,7 @@ export default function TransactionsTable() {
                 </td>
 
                 {/* Date */}
-                <td className="text-gray-600">
-                  {tx.date}
-                </td>
+                <td className="text-gray-600">{tx.date}</td>
 
                 {/* Type */}
                 <td>
@@ -140,38 +126,26 @@ export default function TransactionsTable() {
                 <td className="text-right font-semibold text-red-500">
                   {tx.amount}
                 </td>
-
               </tr>
             ))}
-
           </tbody>
-
         </table>
       </div>
 
       {/* Footer Pagination */}
       <div className="flex items-center justify-between mt-4 text-sm text-gray-500">
-
         <p>Showing 3 of 14 transactions</p>
 
         <div className="flex gap-2">
-
-          <button className="border px-3 py-1 rounded-md">
-            Previous
-          </button>
+          <button className="border px-3 py-1 rounded-md">Previous</button>
 
           <button className="bg-red-500 text-white px-3 py-1 rounded-md">
             1
           </button>
 
-          <button className="border px-3 py-1 rounded-md">
-            Next
-          </button>
-
+          <button className="border px-3 py-1 rounded-md">Next</button>
         </div>
-
       </div>
-
     </div>
   );
 }
