@@ -19,10 +19,12 @@ const data = [
 
 export default function AreaChartCard() {
   return (
-    <div className="bg-white p-5 rounded-xl shadow-sm h-[350px] flex flex-col">
+    <div className="bg-white p-5 rounded-xl shadow-sm h-87.5 flex flex-col">
       {/* Title */}
       <div className="mb-4">
-        <h3 className="font-semibold text-lg text-black">Weekly Spending Pattern</h3>
+        <h3 className="font-semibold text-lg text-black">
+          Weekly Spending Pattern
+        </h3>
         <p className="text-sm text-gray-500">
           Total spending this month by week
         </p>
@@ -68,7 +70,27 @@ export default function AreaChartCard() {
                 border: "none",
                 fontSize: "12px",
               }}
-              formatter={(value: number) => [`KSh ${value}`, "Spending"]}
+              formatter={(
+                value:
+                  | number
+                  | string
+                  | readonly (string | number)[]
+                  | undefined,
+              ) => {
+                let formattedValue: string;
+                if (Array.isArray(value)) {
+                  // Handle array case (take the first value, as this is a single-series chart)
+                  formattedValue =
+                    typeof value[0] === "number"
+                      ? `KSh ${value[0]}`
+                      : `${value[0]}`;
+                } else if (typeof value === "number") {
+                  formattedValue = `KSh ${value}`;
+                } else {
+                  formattedValue = `${value}`;
+                }
+                return [formattedValue, "Spending"];
+              }}
             />
 
             {/* Area */}

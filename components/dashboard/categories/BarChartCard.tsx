@@ -21,15 +21,13 @@ const data = [
 
 export default function BarChartCard() {
   return (
-    <div className="bg-white p-5 rounded-xl shadow-sm h-[350px] flex flex-col">
+    <div className="bg-white p-5 rounded-xl shadow-sm h-87.5 flex flex-col">
       {/* Title */}
       <div className="mb-4">
         <h3 className="font-semibold text-lg text-black">
           Spending by Category
         </h3>
-        <p className="text-xs text-gray-400">
-          Total amount spent per category
-        </p>
+        <p className="text-xs text-gray-400">Total amount spent per category</p>
       </div>
 
       {/* Chart */}
@@ -69,15 +67,23 @@ export default function BarChartCard() {
                 border: "1px solid #E5E7EB",
                 fontSize: "12px",
               }}
-              formatter={(value: number) => [`KSh ${value.toLocaleString()}`, "Amount"]}
+              formatter={(
+                value:
+                  | string
+                  | number
+                  | readonly (string | number)[]
+                  | undefined,
+              ) => {
+                const singleValue = Array.isArray(value) ? value[0] : value;
+                if (typeof singleValue === "number") {
+                  return [`KSh ${singleValue.toLocaleString()}`, "Amount"];
+                }
+                return [`${singleValue}`, "Amount"];
+              }}
             />
 
             {/* Bars */}
-            <Bar
-              dataKey="value"
-              radius={[8, 8, 0, 0]}
-              barSize={40}
-            >
+            <Bar dataKey="value" radius={[8, 8, 0, 0]} barSize={40}>
               {data.map((entry, index) => (
                 <Cell key={index} fill={entry.color} />
               ))}

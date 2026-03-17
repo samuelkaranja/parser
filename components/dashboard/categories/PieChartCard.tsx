@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  PieChart,
-  Pie,
-  Cell,
-  ResponsiveContainer,
-  Tooltip,
-} from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 const data = [
   { name: "Shopping", value: 15200 },
@@ -62,13 +56,28 @@ export default function PieChartCard() {
       </div>
 
       {/* Chart */}
-      <div className="h-[300px]">
+      <div className="h-75">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Tooltip
-              formatter={(value: number) =>
-                `KSh ${value.toLocaleString()}`
-              }
+              formatter={(
+                value:
+                  | number
+                  | string
+                  | readonly (string | number)[]
+                  | undefined,
+              ) => {
+                if (value !== undefined) {
+                  const processedValue = Array.isArray(value)
+                    ? value[0]
+                    : value;
+                  if (typeof processedValue === "number") {
+                    return `KSh ${processedValue.toLocaleString()}`;
+                  }
+                  return `KSh ${processedValue}`;
+                }
+                return "";
+              }}
             />
 
             <Pie

@@ -64,15 +64,13 @@ const data = [
 
 export default function LineChartCard() {
   return (
-    <div className="bg-white p-5 rounded-xl shadow-sm h-[380px] flex flex-col">
+    <div className="bg-white p-5 rounded-xl shadow-sm h-95 flex flex-col">
       {/* Header */}
       <div className="mb-4">
         <h3 className="font-semibold text-lg text-black">
           Category Trends Over Time
         </h3>
-        <p className="text-xs text-gray-500">
-          6-month spending patterns
-        </p>
+        <p className="text-xs text-gray-500">6-month spending patterns</p>
       </div>
 
       {/* Chart */}
@@ -88,11 +86,7 @@ export default function LineChartCard() {
               tickLine={false}
             />
 
-            <YAxis
-              tick={{ fontSize: 12 }}
-              axisLine={false}
-              tickLine={false}
-            />
+            <YAxis tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
 
             <Tooltip
               contentStyle={{
