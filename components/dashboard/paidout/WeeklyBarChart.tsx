@@ -59,7 +59,7 @@ export default function WeeklyBarChart() {
             {/* Tooltip */}
             <Tooltip
               cursor={{ fill: "rgba(0,0,0,0.05)" }}
-              formatter={(value: number) => `KSh ${value}`}
+              formatter={(value) => `KSh ${Number(value)}`}
             />
 
             {/* Bars */}
