@@ -4,7 +4,7 @@ export default function SummaryCards() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
       {/* Total Spending */}
-      <div className="bg-linear-to from-red-500 to-pink-500 text-white p-5 rounded-2xl">
+      <div className="bg-linear-to-r from-red-500 to-pink-500 text-white p-5 rounded-2xl hover:shadow-2xl hover:cursor-pointer">
         {/* Title + Icon */}
         <div className="flex justify-between items-center gap-2">
           <p className="text-sm font-medium opacity-90">Total Spending</p>
@@ -21,7 +21,7 @@ export default function SummaryCards() {
       </div>
 
       {/* Active Categories */}
-      <div className="bg-white border border-gray-100 p-5 rounded-2xl">
+      <div className="bg-white border border-gray-100 p-5 rounded-2xl hover:shadow-2xl hover:cursor-pointer">
         <div className="flex justify-between items-center gap-2">
           <p className="text-sm text-gray-500">Active Categories</p>
           <div className="w-8 h-8 flex items-center justify-center rounded-full bg-purple-100">
@@ -36,7 +36,7 @@ export default function SummaryCards() {
       </div>
 
       {/* Highest Category */}
-      <div className="bg-white border border-gray-100 p-5 rounded-2xl">
+      <div className="bg-white border border-gray-100 p-5 rounded-2xl hover:shadow-2xl hover:cursor-pointer">
         <div className="flex justify-between items-center gap-2">
           <p className="text-sm text-gray-500">Highest Category</p>
           <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-100">
@@ -51,7 +51,7 @@ export default function SummaryCards() {
       </div>
 
       {/* Average */}
-      <div className="bg-white border border-gray-100 p-5 rounded-2xl">
+      <div className="bg-white border border-gray-100 p-5 rounded-2xl hover:shadow-2xl hover:cursor-pointer">
         <div className="flex justify-between items-center gap-2">
           <p className="text-sm text-gray-500">Avg per Category</p>
           <div className="w-8 h-8 flex items-center justify-center rounded-full bg-orange-100">

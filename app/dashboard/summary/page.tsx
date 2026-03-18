@@ -1,13 +1,29 @@
-export default function SummatyPage() {
-  return (
-    <div className="bg-white p-6 rounded-xl border">
-      <h1 className="text-xl font-semibold mb-4">
-        Summary
-      </h1>
+import ChartsSection from "@/components/dashboard/summary/ChartsSection";
+import FinancialHealth from "@/components/dashboard/summary/FinancialHealth";
+import Insights from "@/components/dashboard/summary/Insights";
+import Metrics from "@/components/dashboard/summary/Metrics";
+import StatsCards from "@/components/dashboard/summary/StatsCards";
+import SummaryCards from "@/components/dashboard/summary/SummaryCards";
+import SummaryHeader from "@/components/dashboard/summary/SummaryHeader";
 
-      <p className="text-gray-500">
-        All M-Pesa transactions summary will appear here.
-      </p>
+export default function SummaryPage() {
+  return (
+    <div className="space-y-6">
+      <div className="p-4 bg-white">
+        <SummaryHeader />
+      </div>
+
+      <SummaryCards />
+
+      <StatsCards />
+
+      <FinancialHealth />
+
+      <ChartsSection />
+
+      <Insights />
+
+      <Metrics />
     </div>
   );
 }
