@@ -11,14 +11,14 @@ export default function Header() {
       </div>
 
       <div className="flex items-center gap-4">
-        <button className="bg-green-600 flex items-center text-white px-6 py-2 rounded-lg text-[17px] cursor-pointer">
+        <button className="bg-green-600 flex items-center text-white px-6 py-2 rounded-lg text-[16px] cursor-pointer">
           <Upload size={18} className="mr-3" />
           Upload Statement
         </button>
 
-        <Bell className="cursor-pointer" color="black" />
+        <Bell size={20} className="cursor-pointer" color="black" />
 
-        <User className="cursor-pointer" color="black" />
+        <User size={20} className="cursor-pointer" color="black" />
       </div>
     </div>
   );

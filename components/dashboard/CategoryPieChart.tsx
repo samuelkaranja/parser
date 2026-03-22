@@ -28,7 +28,7 @@ const renderCustomLabel = (props: PieLabelRenderProps) => {
 export default function CategoryPieChart() {
   return (
     <div className="bg-white p-6 rounded-xl border">
-      <h3 className="text-black text-xl font-semibold mb-4">
+      <h3 className="text-black text-lg font-semibold mb-4">
         Spending by Category
       </h3>
 

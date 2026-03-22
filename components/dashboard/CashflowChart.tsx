@@ -23,13 +23,13 @@ const data = [
 export default function CashflowChart() {
   return (
     <div className="bg-white p-6 rounded-xl border">
-      <h3 className="text-black text-xl font-semibold mb-4">Cashflow Trend</h3>
+      <h3 className="text-black text-lg font-semibold mb-4">Cashflow Trend</h3>
 
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={data}>
-          <XAxis dataKey="week" />
-          <YAxis />
-          <Tooltip />
+          <XAxis dataKey="week" stroke="#000" />
+          <YAxis stroke="#000" />
+          <Tooltip cursor={{ fill: "transparent" }} />
 
           <Line
             type="monotone"

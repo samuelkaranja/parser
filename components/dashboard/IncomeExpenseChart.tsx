@@ -19,18 +19,18 @@ const data = [
 export default function IncomeExpenseChart() {
   return (
     <div className="bg-white p-6 rounded-xl border">
-      <h3 className="text-black text-xl font-semibold mb-4">
+      <h3 className="text-black text-lg font-semibold mb-4">
         Monthly Income vs Expenses
       </h3>
 
       <ResponsiveContainer width="100%" height={300}>
-        <BarChart data={data}>
-          <XAxis dataKey="month" color="black" />
-          <YAxis />
-          <Tooltip />
+        <BarChart data={data} barCategoryGap="25%">
+          <XAxis dataKey="month" stroke="#000" />
+          <YAxis stroke="#000" />
+          <Tooltip cursor={{ fill: "transparent" }} />
 
-          <Bar dataKey="income" fill="#22c55e" />
-          <Bar dataKey="expense" fill="#ef4444" />
+          <Bar dataKey="income" fill="#22c55e" barSize={18} />
+          <Bar dataKey="expense" fill="#ef4444" barSize={18} />
         </BarChart>
       </ResponsiveContainer>
     </div>

@@ -15,7 +15,7 @@ export default function StatsCards() {
         >
           <p className="text-gray-500 text-sm">{card.title}:</p>
 
-          <h2 className="text-2xl text-black font-bold mt-2">{card.amount}</h2>
+          <h2 className="text-2xl text-black font-extrabold mt-2">{card.amount}</h2>
 
           {card.change && (
             <p className="text-green-600 text-sm mt-1">{card.change}</p>
