@@ -17,7 +17,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex gap-8 text-gray-600 text-[15px]">
+        <div className="hidden md:flex gap-8 text-gray-600 text-[16px]">
           <a href="#">Features</a>
           <a href="#">Pricing</a>
           <a href="#">About</a>
@@ -25,7 +25,7 @@ export default function Navbar() {
 
         <Link
           href={"/dashboard"}
-          className="bg-emerald-500 px-5 py-1 rounded text-white font-medium text-[14px] hover:cursor-pointer"
+          className="bg-emerald-700 px-5 py-1 rounded-2xl text-white font-medium text-[14px] hover:cursor-pointer"
         >
           Dashboard
         </Link>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import {Upload} from "lucide-react";
 
 export default function Hero() {
   return (
@@ -6,10 +7,6 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left */}
         <div>
-          <span className="inline-block bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">
-            AI-Powered Financial Intelligence
-          </span>
-
           <h1 className="mt-6 text-3xl sm:text-4xl text-black lg:text-5xl font-bold leading-tight">
             Understand Your{" "}
             <span className="text-green-500">M-Pesa Spending</span> in Seconds
@@ -17,15 +14,14 @@ export default function Hero() {
 
           <p className="mt-5 text-gray-600 text-lg">
             Transform your M-Pesa statements into actionable insights.
-            Automatically categorize transactions and visualize spending.
+            Automatically categorize transactions and visualize spending patterns and make smarter financial decisions.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <button className="bg-green-500 text-white text-lg px-6 py-3 rounded-lg">
+          <div className="mt-8">
+            <button className="flex items-center gap-2 bg-green-700 text-white text-[16px] font-bold px-6 py-3 rounded-lg hover:cursor-pointer">
+            	<Upload size={17} color="white" />
               Upload Statement
             </button>
-
-            {/* <button className="border px-6 py-3 rounded-lg">Try Demo</button> */}
           </div>
         </div>
 
@@ -36,13 +32,13 @@ export default function Hero() {
               src="/chart.png"
               alt="chart"
               width={550}
-              height={500}
+              height={450}
               className="object-cover"
               loading="eager"
             />
           </div>
         </div>
-        {/* <div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-md mx-auto">
+        {/*<div className="bg-white p-6 rounded-xl shadow-lg w-full max-w-md mx-auto">
           <p className="text-gray-500">Total Balance</p>
 
           <p className="text-3xl font-bold text-green-600 mt-1">KSh 97,870</p>

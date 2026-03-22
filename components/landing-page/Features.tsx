@@ -54,14 +54,10 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <span className="inline-block bg-green-100 text-green-700 text-sm font-medium px-4 py-1 rounded-full">
-            Powerful Features
-          </span>
-
           <h2 className="mt-4 text-3xl sm:text-4xl text-black font-bold">
             Everything You Need for{" "}
             <span className="text-green-600">Financial Clarity</span>
@@ -94,7 +90,7 @@ export default function Features() {
                 <h3 className="mt-4 text-lg text-black font-semibold">{feature.title}</h3>
 
                 {/* Description */}
-                <p className="mt-3 text-gray-600 text-[18px] leading-relaxed">
+                <p className="mt-3 text-gray-600 text-[16px] leading-relaxed">
                   {feature.description}
                 </p>
               </div>

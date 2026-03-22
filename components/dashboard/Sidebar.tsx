@@ -28,7 +28,7 @@ export default function Sidebar() {
     {
       label: "Upload Statement",
       icon: <Upload size={18} />,
-      href: "/upload",
+      href: "/dashboard/upload-statement",
     },
     {
       label: "Paid In",
@@ -74,7 +74,7 @@ export default function Sidebar() {
       <aside
         className={`
         fixed top-0 left-0 z-50
-        h-screen w-64
+        h-screen w-72
         bg-white border-r p-6
         flex flex-col overflow-y-auto
         transform transition-transform duration-300
@@ -94,7 +94,7 @@ export default function Sidebar() {
         </div>
 
         {/* Navigation */}
-        <nav className="space-y-4 text-gray-600">
+        <nav className="space-y-4 text-[16px] text-gray-600">
           {navItems.map((item) => (
             <SidebarItem
               key={item.label}
@@ -108,7 +108,7 @@ export default function Sidebar() {
         </nav>
 
         {/* Bottom section */}
-        <div className="mt-auto">
+        <div className="mt-auto text-[16px]">
           <SidebarItem
             icon={<Settings size={18} />}
             label="Settings"
@@ -145,7 +145,7 @@ function SidebarItem({
         ${
           active
             ? "bg-green-100 text-green-600 font-medium"
-            : "hover:bg-gray-100"
+            : "hover:bg-gray-100 text-black"
         }`}
     >
       {icon}

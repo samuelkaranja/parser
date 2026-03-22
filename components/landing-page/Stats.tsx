@@ -13,7 +13,7 @@ export default function Stats() {
           <div key={i}>
             <h3 className="text-2xl md:text-3xl font-bold">{stat.value}</h3>
 
-            <p className="text-gray-300 mt-1">{stat.label}</p>
+            <p className="text-sm text-gray-300 mt-1">{stat.label}</p>
           </div>
         ))}
       </div>
