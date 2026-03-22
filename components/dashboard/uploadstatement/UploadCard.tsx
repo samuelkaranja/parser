@@ -1,4 +1,5 @@
 import UploadBox from "./UploadBox";
+import {Upload} from "lucide-react";
 
 export default function UploadCard() {
   return (
@@ -15,7 +16,8 @@ export default function UploadCard() {
 
       <UploadBox />
 
-      <button className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2">
+      <button className="w-full bg-green-800 hover:bg-green-600 hover:cursor-pointer text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2">
+      	<Upload size={19} />
         Parse Statement
       </button>
     </div>

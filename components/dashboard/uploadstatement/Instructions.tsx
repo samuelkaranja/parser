@@ -1,11 +1,11 @@
 export default function Instructions() {
   return (
     <div className="bg-white rounded-xl shadow-sm border p-4 md:p-6">
-      <h3 className="font-semibold text-gray-800 mb-4">
+      <h3 className="font-semibold text-lg text-gray-800 mb-4">
         How to get your M-Pesa statement
       </h3>
 
-      <ol className="space-y-3 text-sm text-gray-600 list-decimal list-inside">
+      <ol className="space-y-3 text-sm text-gray-600 font-medium list-decimal list-inside">
         <li>Dial *234# on your M-Pesa registered phone</li>
         <li>Select "My Account"</li>
         <li>Select "M-Pesa Statement"</li>
