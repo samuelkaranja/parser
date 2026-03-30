@@ -87,7 +87,7 @@ export default function Features() {
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-4 text-lg text-black font-semibold">{feature.title}</h3>
+                <h3 className="mt-4 text-lg text-black font-bold">{feature.title}</h3>
 
                 {/* Description */}
                 <p className="mt-3 text-gray-600 text-[16px] leading-relaxed">

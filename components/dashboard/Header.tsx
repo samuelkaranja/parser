@@ -3,7 +3,7 @@ import { Bell, Upload, User } from "lucide-react";
 export default function Header() {
   return (
     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-      <div>
+      <div className="text-center">
         <h1 className="text-2xl font-bold text-black">Financial Dashboard</h1>
         <p className="text-gray-500 text-sm">
           Overview of your M-Pesa transactions

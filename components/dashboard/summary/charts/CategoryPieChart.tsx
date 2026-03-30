@@ -22,7 +22,7 @@ export default function CategoryPieChart() {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 items-center justify-between gap-4">
+      <div className="flex flex- md:flex-1 items-center justify-between gap-4">
         {/* Pie Chart */}
         <div className="w-1/2 h-full">
           <ResponsiveContainer>

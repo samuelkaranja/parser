@@ -89,7 +89,7 @@ export default function Sidebar() {
           </Link>
 
           <button onClick={() => setOpen(false)} className="md:hidden">
-            <X size={22} />
+            <X size={20} color="#333" />
           </button>
         </div>
 
